@@ -1,6 +1,8 @@
 import styles from './Banner.module.css'
 
 const Banner = props => {
+  const {buttonLabel, handleOnClick} = props
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
@@ -8,7 +10,7 @@ const Banner = props => {
         <span className={styles.title2}>Connoisseur</span>
       </h1>
       <p className={styles.subTitle}>Discover your local coffee stores!</p>
-      <button className={styles.button}>View stores nearby</button>
+      <button className={styles.button} onClick={handleOnClick}>{buttonLabel}</button>
     </div>
   )
 }
