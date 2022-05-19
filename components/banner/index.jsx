@@ -1,7 +1,7 @@
-import styles from './Banner.module.css'
+import styles from "./Banner.module.css";
 
-const Banner = props => {
-  const {buttonLabel, handleOnClick} = props
+const Banner = (props) => {
+  const { buttonLabel, handleOnClick } = props;
 
   return (
     <div className={styles.container}>
@@ -10,9 +10,13 @@ const Banner = props => {
         <span className={styles.title2}>Connoisseur</span>
       </h1>
       <p className={styles.subTitle}>Discover your local coffee stores!</p>
-      <button className={styles.button} onClick={handleOnClick}>{buttonLabel}</button>
+      <div className={styles.buttonWrapper}>
+        <button className={styles.button} onClick={handleOnClick}>
+          {buttonLabel}
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;
